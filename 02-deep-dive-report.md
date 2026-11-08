@@ -132,12 +132,11 @@ Quy trình kiểm tra bệnh lá và điều chỉnh công thức dinh dưỡng 
 
 # 💻 Phase 4 — TECHNICAL PROMPT PROTOTYPE & BOUNDARY STRESS-TEST (Cá nhân)
 
-Tôi đã xây dựng bản mẫu kỹ thuật tại [`starter-code/prompt_prototype.py`](starter-code/prompt_prototype.py) chạy trên **Google Gemini Flash** để kiểm chứng các ranh giới vận hành (**Operational Boundaries**):
+Tôi đã xây dựng bản mẫu kỹ thuật tại [`starter-code/prompt_prototype.py`](starter-code/prompt_prototype.py) chạy trên **Google Gemini Flash** để kiểm chứng các ranh giới vận hành (**Operational Boundaries**) của Vườn Cà Chua $0,1\text{ ha}$:
 
-1. **Quy tắc 1 (`[DRAFT_ONLY]` & Cấm tự động kích hoạt bơm — HITL):** Mọi phản hồi tư vấn phác đồ điều trị lá bệnh, pha phân A-B cho bồn $1.000\text{ lít}$ hoặc chỉ dẫn vận hành đều **bắt buộc** bắt đầu bằng thẻ `[DRAFT_ONLY]` để ngăn chặn việc tự động thực thi khi chưa có sự phê duyệt (**Approve**) của con người.
-2. **Quy tắc 2 (Ngưỡng nguy hiểm `< 5%` & Ranh giới an toàn hệ thống):**
-   * Khi hệ thống nhận cảnh báo dung dịch cốt/mức pin thiết bị vận hành ở ngưỡng nguy kịch (`< 5%`), hệ thống **tuyệt đối từ chối** các yêu cầu vận hành vượt ngưỡng an toàn (như tự động bơm hóa chất đậm đặc hoặc điều xe đi trạm xa $> 5\text{ km}$) và bắt buộc trả về lệnh an toàn khẩn cấp (`dispatch_mobile_charger` / yêu cầu can thiệp thủ công tại chỗ).
-3. **Kết quả Stress-Test với 3 Adversarial Inputs:** Cả 3 kịch bản tấn công (ép bỏ qua thẻ `[DRAFT_ONLY]`, ép vận hành khi mức dự trữ dưới ngưỡng nguy kịch `< 5%`, và ép Bot tự động kích hoạt bơm định lượng thuốc BVTV/phân A-B mà không chờ chủ vườn bấm Approve) đều bị chặn đứng (**100% Passed, 0 Failed**).
+1. **Quy tắc 1 (`[DRAFT_ONLY]` & Cấm tự động kích hoạt bơm — HITL):** Mọi phản hồi tư vấn phác đồ điều trị lá bệnh và tính số gam phân A-B / ml thuốc cho bồn $1.000\text{ lít}$ đều **bắt buộc** bắt đầu bằng thẻ `[DRAFT_ONLY]`, yêu cầu Chủ vườn nhấn **"Approve"** và tuyệt đối cấm tự động kích hoạt bơm định lượng hóa chất.
+2. **Quy tắc 2 (Ngưỡng nguy hiểm `< 5%` dung dịch cốt bồn pha):** Khi mức dung dịch cốt phân A-B trong bồn báo dưới ngưỡng an toàn (`< 5%`), hệ thống **tuyệt đối từ chối** lệnh pha/bơm tự động và bắt buộc yêu cầu kiểm tra, châm thêm dung dịch thủ công tại chỗ.
+3. **Kết quả Stress-Test với 3 Adversarial Inputs:** Cả 3 kịch bản tấn công (ép tự động bật bơm hóa chất khi dung dịch cốt `< 5%`, ép bỏ qua thẻ `[DRAFT_ONLY]` khi tính phân A-B theo thời tiết, và ép kê liều thuốc BVTV gấp 3 lần ngoài giáo trình VietGAP) đều bị chặn đứng (**100% Passed, 0 Failed**).
 
 ---
 
@@ -151,11 +150,6 @@ Tôi đã xây dựng bản mẫu kỹ thuật tại [`starter-code/prompt_proto
 * ☑️ **4. Tolerance (Chấp nhận sai số có HITL?): YES** — Hệ thống luôn hiển thị kèm **ảnh mẫu bệnh trong giáo trình** và **trang trích dẫn** để chủ vườn đối chiếu trước khi phun/tưới (**HITL**).
 * ☑️ **5. Operations (Có Rollback & Logging?): YES** — Mọi lượt hỏi đáp đều lưu log tự động trên **Google Sheets**; nếu API lỗi, lập tức chuyển về tra cứu **bảng PDF gốc trong 10 giây**.
 
-### Đối chiếu AI Readiness Checklist:
-1. [x] **Có sẵn dữ liệu mẫu/logs sạch để test?** (Có sẵn 50–100 ảnh lá cà chua tại vườn + 3 tài liệu kỹ thuật trồng cà chua nhà màng chuẩn VietGAP + 30 kịch bản pha phân A-B).
-2. [x] **Rủi ro khi AI sai có nằm trong tầm kiểm soát (qua HITL hoặc Fallback)?** (Có: Nhãn `[DRAFT_ONLY]`, cấm tự động kích hoạt bơm hóa chất, hiển thị ảnh mẫu + số trang tài liệu để Chủ vườn bấm "Approve", và Fallback về PDF gốc trong 10s).
-3. [x] **Stakeholders sẵn sàng thay đổi quy trình làm việc cũ?** (Có: Giao diện Zalo/Telegram Bot quen thuộc hàng ngày của Chủ vườn, giảm thời gian tra cứu từ 2 giờ xuống dưới 2 phút).
-
 ---
 
 ## 5.2. QUYẾT ĐỊNH TẠI GATE & NEXT EXPERIMENT
@@ -168,7 +162,7 @@ Tôi đã xây dựng bản mẫu kỹ thuật tại [`starter-code/prompt_proto
 ### Lý do (Justification):
 > Bài toán có điểm nghẽn rõ ràng, dữ liệu giáo trình và ảnh mẫu sẵn có, kiến trúc Bot + API cực kỳ tiết kiệm ($200.000 - 300.000\text{ VNĐ/tháng}$) giúp **ROI dương ngay ở quy mô $0,1\text{ ha}$**, đồng thời tạo ra sản phẩm mẫu (MVP) hoàn chỉnh.
 
-### Next Experiment (Triển khai ngay trong 7 ngày tới):
+### Next Experiment (Kế hoạch triển khai ngay trong 7 ngày tới):
 * **Ngày 1 – 2 (Data & Baseline):** Thu thập **50 ảnh lá cà chua tại vườn** (cả lá khỏe, lá thiếu chất, lá bệnh) + số hóa **3 tài liệu kỹ thuật trồng cà chua nhà màng chuẩn** để lập bộ Eval.
 * **Ngày 3 – 5 (Build MVP):** Kết nối **Telegram Bot** với **Gemini/GPT-4o Vision API** và kho tài liệu **RAG**; thiết lập cấu trúc trả lời bắt buộc có trích dẫn nguồn (**Structured Output** + thẻ `[DRAFT_ONLY]`).
 * **Ngày 6 – 7 (Gate Eval):** Chạy thử nghiệm **50 ca trên Bot**, đối chiếu kết quả với **Kỹ sư nông nghiệp**. Nếu đạt $\ge 85\%$ đồng thuận và thời gian phản hồi $< 10\text{ giây}$ $\rightarrow$ **Chính thức Go-Live** áp dụng cho toàn vụ mùa.

@@ -2,27 +2,26 @@
 
 - **Họ và tên:** Vũ Trọng Quang
 - **MSSV:** 2A202603535
-- **Dự án cá nhân:** Hệ thống AI Chẩn đoán Bệnh Lá & Trợ lý Pha Dinh Dưỡng Tưới Nhỏ Giọt qua Zalo/Telegram Bot (Vườn Cà Chua Quy Mô $0,1\text{ ha}$ — Living Lab)
+- **Dự án:** Hệ thống AI Chẩn đoán Bệnh Lá & Trợ lý Pha Dinh Dưỡng Tưới Nhỏ Giọt qua Zalo/Telegram Bot (Vườn Cà Chua Quy Mô $0,1\text{ ha} = 1.000\text{ m}^2 \approx 2.500$ gốc nhà màng — Living Lab)
 
 ---
 
 # 🔍 Phase 1 — SCAN (Cá nhân)
 
-### 📝 Danh sách bài toán quét qua 4 Lenses:
-| # | Dự án / Đơn vị | Lens | Mô tả ngắn bài toán |
-|---|----------------|------|---------------------|
-| 1 | **Vườn Cà Chua Nhà Màng 0,1 ha (Living Lab)** | Tốn thời gian & AI có thể tốt hơn | Chủ vườn ($2.500$ gốc cà chua nhà màng) mất 2–3 giờ mỗi khi lá xoăn/đốm hoặc đổi thời tiết để lật sổ tay giấy/tra cứu đoán bệnh và tính lại công thức phân A-B cho bồn $1.000\text{ lít}$, gây thiệt hại 10%–15% sản lượng ($25 - 35\text{ triệu VNĐ/vụ}$). |
-| 2 | **Vườn Cà Chua Nhà Màng 0,1 ha (Living Lab)** | Lặp lại | Ghi chép nhật ký canh tác VietGAP thủ công trên sổ giấy (EC/pH, lượng tưới, ngày cách ly thuốc BVTV) và nhập lại vào bảng tính cuối tuần tốn 4–5 giờ/tuần. |
-| 3 | **Xanh SM (GSM)** | Tốn thời gian | Điều phối viên xử lý thủ công sự cố tài xế báo hết pin giữa đường: tra cứu GPS, tìm trụ sạc VinFast trống phù hợp và soạn SMS hướng dẫn hoặc gọi cứu hộ pin (mất 15 phút/lượt). |
-| 4 | **VinFast** | Lặp lại | Đối chiếu hóa đơn sạc điện và đối soát sản lượng điện tiêu thụ hằng tuần từ hàng nghìn trụ sạc đối tác ngoài với hệ thống ERP. |
-| 5 | **Vinhomes** | AI có thể tốt hơn | Phân loại và điều hướng tự động các phản ánh/khiếu nại kèm ảnh chụp của cư dân trên App Vinhomes Resident đến đúng tổ kỹ thuật tòa nhà (SLA hiện mất 12 giờ). |
-| 6 | **Vinmec** | Pain từ người khác | Bác sĩ mất 20–30 phút/bệnh nhân để tổng hợp xét nghiệm và bệnh án thành bản tóm tắt hồ sơ xuất viện (Discharge Summary). |
+### 📝 Danh sách bài toán trong Vườn Cà Chua Nhà Màng 0,1 ha quét qua 4 Lenses:
+| # | Hạng mục tại Vườn Cà Chua 0,1 ha | Lens | Mô tả ngắn bài toán |
+|---|----------------------------------|------|---------------------|
+| 1 | **Chẩn đoán bệnh lá & Pha dinh dưỡng tưới nhỏ giọt A-B** | Tốn thời gian & AI có thể tốt hơn | Chủ vườn ($2.500$ gốc cà chua nhà màng) mất 2–3 giờ mỗi khi lá xoăn/đốm hoặc đổi thời tiết để lật sổ tay giấy/tra cứu đoán bệnh và tính lại công thức phân A-B cho bồn $1.000\text{ lít}$, gây thiệt hại 10%–15% sản lượng ($25 - 35\text{ triệu VNĐ/vụ}$) và tốn thêm 20% chi phí thuốc BVTV. |
+| 2 | **Giám sát vi khí hậu & Cảnh báo nấm bệnh theo độ ẩm** | Lặp lại | Kiểm tra nhiệt/ẩm kế thủ công nhiều lần trong ngày; khi độ ẩm vượt $> 85\%$ dễ bùng phát nấm mốc sương nếu không nhận được cảnh báo kịp thời để thông gió. |
+| 3 | **Ghi chép nhật ký canh tác VietGAP & Ngày cách ly** | Lặp lại & Tốn thời gian | Ghi sổ tay giấy lịch pha phân A-B, chỉ số EC/pH, lượng thuốc BVTV rồi nhập lại vào bảng tính cuối tuần tốn 3–4 giờ/tuần, dễ sót ngày cách ly thu hoạch. |
+| 4 | **Đánh giá độ ngọt (Brix) & Phân loại độ chín quả** | AI có thể tốt hơn | Phân loại quả thu hoạch và ước lượng độ ngọt (Brix) bằng mắt thường thiếu đồng đều trên $2.500$ gốc. |
+| 5 | **Đếm bẫy dính vàng phát hiện sớm bọ phấn trắng** | Pain từ người khác | Đi đếm côn trùng trên từng tấm bẫy dính vàng trong nhà màng $1.000\text{ m}^2$ gây mỏi mắt và dễ sót ổ dịch truyền virus xoăn vàng lá. |
 
 ---
 
 # 🃏 Phase 2 — QUICK-ASSESS (Cá nhân)
 
-*(Chi tiết cả 3 thẻ Quick Problem Cards được trình bày đầy đủ tại file [`01-problem-scan.md`](01-problem-scan.md)).*
+*(Chi tiết cả 3 thẻ Quick Problem Cards của Vườn Cà Chua 0,1 ha được trình bày đầy đủ tại file [`01-problem-scan.md`](01-problem-scan.md)).*
 
 ```text
 ┌───────────────────────────────────────────────────────────────────────────┐
@@ -30,8 +29,7 @@
 │                                                                           │
 │ Bài toán (1 câu): Hệ thống AI Chẩn đoán Bệnh Lá & Trợ lý Pha Dinh Dưỡng   │
 │ Tưới Nhỏ Giọt qua Zalo/Telegram Bot cho Vườn Cà Chua Nhà Màng 0,1 ha.     │
-│ Đơn vị triển khai: [ ] VinFast  [ ] Xanh SM  [ ] Vinhomes                 │
-│                    [ ] Vinmec   [x] Khác: Vườn Cà Chua 0,1 ha (Living Lab)│
+│ Quy mô / Mô hình: Vườn Cà Chua Nhà Màng 0,1 ha (1.000 m2 ~ 2.500 gốc)     │
 │                                                                           │
 │ Ai đang đau (Actor)? Chủ vườn kiêm người vận hành trực tiếp (2.500 gốc).  │
 │                                                                           │
@@ -47,7 +45,8 @@
 │   Top-3 Accuracy >= 85% (100 ảnh test); Groundedness = 100%;              │
 │   Giảm thời gian ra quyết định từ 2 giờ ──> dưới 2 phút/ca; Cây chết < 3% │
 │                                                                           │
-│ Quick Architecture: [ ] No AI  [ ] Rule  [x] LLM (Vision+RAG) + Workflow  │
+│ Quick Architecture: [ ] No AI  [ ] Rule  [x] Workflow có State +          │
+│                                              Multimodal LLM Feature (RAG) │
 └───────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -65,7 +64,7 @@
 | Field | Nội dung chi tiết |
 |---|---|
 | **1. Actor / Operator** | Chủ vườn kiêm người vận hành trực tiếp (chăm sóc $2.500$ gốc cà chua mỗi ngày trên diện tích $0,1\text{ ha}$). |
-| **2. Current Workflow** | Mỗi sáng đi kiểm tra lá và đo bút EC/pH thủ công $\rightarrow$ Khi thấy lá xoăn/đốm hoặc thời tiết đổi nắng sang mưa $\rightarrow$ Lật sổ tay giấy hoặc hỏi hội trồng trọt để chỉnh công thức phân A-B và tìm thuốc đặc trị. |
+| **2. Current Workflow** | Mỗi sáng đi kiểm tra lá và đo bút EC/pH thủ công $\rightarrow$ Khi thấy lá xoăn/đốm hoặc thời tiết đổi nắng sang mưa $\rightarrow$ Lật sổ tay giấy hoặc hỏi diễn đàn trồng trọt để chỉnh công thức phân A-B và tìm thuốc đặc trị. |
 | **3. Bottleneck** | Chẩn đoán bằng mắt thường hay nhầm lẫn giữa thiếu vi lượng và nhiễm nấm/vi khuẩn; tính toán lại lượng phân theo thời tiết chậm trễ mất 2 – 3 giờ, làm lỡ "thời điểm vàng" cách ly dịch bệnh. |
 | **4. Business Impact** | Phát hiện và xử lý sai làm lây lan ổ bệnh, gây thiệt hại 10% – 15% sản lượng ($\approx 1 - 1,5\text{ tấn}$ quả/vụ, tương đương mất **25 – 35 triệu VNĐ**) và tốn thêm **20% chi phí thuốc BVTV**. |
 | **5. Success Metric** | • **System Metric:** Độ chính xác chẩn đoán (Top-3 Accuracy) đạt $\ge 85\%$ trên bộ test 100 ảnh lá thực tế; Trích xuất đúng $100\%$ liều lượng phân/thuốc theo tài liệu gốc (Groundedness).<br>• **Business KPI:** Giảm thời gian ra quyết định xử lý từ 2 giờ xuống **dưới 2 phút/ca**; giảm tỷ lệ cây chết/nhổ bỏ xuống **dưới 3%/vụ**. |
@@ -82,16 +81,18 @@
 ---
 
 # 💻 Phase 4 — TECHNICAL PROMPT PROTOTYPE (Cá nhân)
-*Đã hoàn thiện tại [`starter-code/prompt_prototype.py`](starter-code/prompt_prototype.py) và vượt qua toàn bộ kiểm thử ranh giới an toàn (`[DRAFT_ONLY]`, ngưỡng `< 5%`, cấm tự động bật bơm hóa chất).*
+*Đã hoàn thiện tại [`starter-code/prompt_prototype.py`](starter-code/prompt_prototype.py) cho bài toán Vườn Cà Chua 0,1 ha và vượt qua toàn bộ kiểm thử ranh giới an toàn (`[DRAFT_ONLY]`, cấm tự động kích hoạt bơm định lượng hóa chất, kiểm soát ngưỡng an toàn `< 5%`).*
 
 ---
 
 # 🏁 Phase 5 — EVALUATE (Cá nhân)
 
-### AI Readiness Checklist (Đạt 5/5 tiêu chí YES — Trang 21 & 35):
-1. [x] Có sẵn dữ liệu mẫu/logs sạch để test? *(Có bộ 100 ảnh lá cà chua thực tế + 30 kịch bản pha phân + 3 giáo trình kỹ thuật chuẩn).*
-2. [x] Rủi ro khi AI sai có nằm trong tầm kiểm soát (qua HITL hoặc Fallback)? *(Có: HITL Approve, nhãn `[DRAFT_ONLY]`, cấm tự động kích hoạt bơm, đối chiếu ảnh mẫu + trang trích dẫn, Fallback về PDF gốc trong 10 giây).*
-3. [x] Stakeholders sẵn sàng thay đổi quy trình làm việc cũ? *(Có: Tương tác qua Zalo/Telegram Bot quen thuộc, chi phí chỉ 200.000–300.000 VNĐ/tháng).*
+### AI Readiness & Feasibility Check (Đạt 5/5 tiêu chí YES — Trang 21 & 35):
+1. [x] **Value (Có giá trị thực?):** YES — Bảo vệ 25 – 35 triệu VNĐ doanh thu mỗi vụ với chi phí vận hành chỉ 200.000 – 300.000 VNĐ/tháng.
+2. [x] **Baseline (Có mốc so sánh?):** YES — So sánh trực tiếp với tốc độ tra cứu sổ tay giấy (mất 30–120 phút) và tỷ lệ đoán bệnh bằng mắt của chủ vườn.
+3. [x] **Eval (Đo lường lặp lại được?):** YES — Có sẵn bộ 100 ảnh lá cà chua thực tế và 30 kịch bản pha phân theo giai đoạn sinh trưởng để chạy test tự động.
+4. [x] **Tolerance (Chấp nhận sai số có HITL?):** YES — Hệ thống luôn hiển thị kèm ảnh mẫu bệnh trong giáo trình và trang trích dẫn để chủ vườn đối chiếu trước khi phun (HITL).
+5. [x] **Operations (Có Rollback & Logging?):** YES — Mọi lượt hỏi đáp đều lưu log tự động trên Google Sheets; nếu API lỗi, lập tức chuyển về tra cứu bảng PDF gốc trong 10 giây.
 
 ### Quyết định cuối cùng:
 * [x] **🟢 GO (CHÍNH THỨC TRIỂN KHAI PILOT):** Bắt đầu phát triển với scope hẹp tại Vườn Cà Chua Nhà Màng $0,1\text{ ha}$.
@@ -99,9 +100,9 @@
 * [ ] **NO-GO**
 
 **Justification (Lý giải quyết định dựa trên bằng chứng kỹ thuật và chi phí):**
-> Bài toán có điểm nghẽn rõ ràng, dữ liệu giáo trình và ảnh mẫu sẵn có, kiến trúc Serverless Telegram Bot + Vision-RAG API cực kỳ tiết kiệm ($200.000 - 300.000\text{ VNĐ/tháng}$) giúp bảo vệ $25 - 35\text{ triệu VNĐ/vụ}$ và mang lại **ROI dương ngay ở quy mô $0,1\text{ ha}$**, đồng thời tạo ra sản phẩm mẫu (MVP) hoàn chỉnh trong 7 ngày tới (Ngày 1–2: Data & Baseline 50 ảnh + 3 tài liệu; Ngày 3–5: Build MVP Bot + Vision-RAG; Ngày 6–7: Gate Eval 50 ca đối chiếu với Kỹ sư nông nghiệp đạt $\ge 85\%$ đồng thuận và phản hồi $< 10\text{s}$).
+> Bài toán có điểm nghẽn rõ ràng, dữ liệu giáo trình và ảnh mẫu sẵn có, kiến trúc Serverless Telegram Bot + Vision-RAG API cực kỳ tiết kiệm ($200.000 - 300.000\text{ VNĐ/tháng}$) giúp bảo vệ $25 - 35\text{ triệu VNĐ/vụ}$ và mang lại **ROI dương ngay ở quy mô $0,1\text{ ha}$**, đồng thời tạo ra sản phẩm mẫu (MVP) hoàn chỉnh trong 7 ngày tới.
 
 ---
 
 # 📝 Phase 6 — REFLECTION (Cá nhân)
-*Chi tiết nhật ký phản tư cá nhân được ghi nhận tại file [`03-ai-log.md`](03-ai-log.md).*
+*Chi tiết nhật ký tương tác AI được ghi nhận tại file [`03-ai-log.md`](03-ai-log.md).*
