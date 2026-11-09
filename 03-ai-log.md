@@ -1,3 +1,5 @@
+
+Họ và tên : Vũ Văn Hảo  gmail:vuvanhao034@gmail.com
 # 03 - Nhật Ký Tương Tác AI (AI Log & Reflection)
 
 1. **AI đã hỗ trợ gì:**
